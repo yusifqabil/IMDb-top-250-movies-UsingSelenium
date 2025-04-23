@@ -11,7 +11,6 @@ for movie in allMovies :
     allSpans = movie.find_elements(By.TAG_NAME,"span")
     year = allSpans[1].text
     duration = allSpans[2].text
-    print(year)
     result.append((name,year,duration,rating))
 df = pd.DataFrame(result,columns=["name","year","duration","rating"])
 with open("output.csv","w") as out : 
